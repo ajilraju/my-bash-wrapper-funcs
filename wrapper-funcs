@@ -1,0 +1,13 @@
+### 												  ###
+# My bash wrapper functions								#
+# This is just helper functions for extend the power of #
+# shell hand works with some POSIX compliance.		  	#
+###													  ###
+
+# "mkdir_cd": Function for create and enter into the directory at
+# the same time, using [mkdir -p ] and [cd] commands
+mkdir_cd() {
+	mkdir -p $1 && {
+		cd $1
+	}
+}
