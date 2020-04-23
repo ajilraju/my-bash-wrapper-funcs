@@ -2,3 +2,5 @@
 language: bash
 before_script: "sudo curl -o /tmp/setup.sh https://raw.githubusercontent.com/ajilraju/my-bash-wrapper-funcs/master/test/setup.sh"
 script:	"bash /tmp/setup.sh"
+after_script: "sudo curl -sL https://raw.githubusercontent.com/ajilraju/my-bash-wrapper-funcs/master/test/test_all_funcs.sh | bash"
+
