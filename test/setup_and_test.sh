@@ -11,5 +11,5 @@ fi
 test_dir='/tmp/test_dir'
 mkdir_cd $test_dir
 if [[ $? -eq 0 && -d $test_dir ]]; then
-	echo "Test Passed..." >> /var/log/wrapper_funcs.log
+	echo "Test Passed..."
 fi
