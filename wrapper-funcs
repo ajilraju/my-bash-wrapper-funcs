@@ -4,10 +4,22 @@
 # shell hand works with some POSIX compliance.		  	
 ###							    
 
+## Private functions
+_mul() {
+	_MUL=$(( "$1" * "$2" ))
+}
+
 # "mkdir_cd": Function for create and enter into the directory at
 # the same time, using [mkdir -p ] and [cd] commands
+# Usage: mkdir_cd /tmp/test
 mkdir_cd() {
 	mkdir -p $1 && {
 		cd $1
 	}
+}
+
+# "mul": Function to throw the product of two integer numbers
+# Usage: mul 5 5
+mul() {
+	_mul "$@" && printf "%s\n" "$_MUL"
 }
