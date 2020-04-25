@@ -8,8 +8,16 @@ if [ -f "./wrapper-funcs" ]; then
 	source ./wrapper-funcs
 fi
 
+# Test code for mkdir_cd function
 test_dir='/tmp/test_dir'
 mkdir_cd $test_dir
 if [[ $? -eq 0 && -d $test_dir ]]; then
 	echo "Test Passed..."
+fi
+
+# Test code for mul function
+if eval "mul 2 2" == 4; then
+	echo "Test passed..."
+else
+	echo "Test failed..."
 fi
