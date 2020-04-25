@@ -6,7 +6,7 @@
 
 ## Private functions
 _mul() {
-	_MUL=$(( "$1" * "$2" ))
+	_MUL=$(( $1 * $2 ))
 }
 
 # "mkdir_cd": Function for create and enter into the directory at
