@@ -23,3 +23,11 @@ mkdir_cd() {
 mul() {
 	_mul "$@" && printf "%s\n" "$_MUL"
 }
+
+# "die": Function to throw custom exit status code and messages
+# Usage: die <exit_code> <"message">
+die() {
+	exit_status=$1
+	printf "%s\n" "$2" >&2
+	exit $exit_status
+}

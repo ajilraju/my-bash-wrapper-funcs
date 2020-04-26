@@ -21,3 +21,11 @@ if eval "mul 2 2" == 4; then
 else
 	echo "Test failed..."
 fi
+
+# Test code for die function
+(die 512 "fatal error occured")
+if [ $? -eq 512 ];then
+	echo "Test passed..."
+else
+	echo "Test failed..."
+fi
