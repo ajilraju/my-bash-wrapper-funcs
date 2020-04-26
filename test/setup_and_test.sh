@@ -19,13 +19,13 @@ fi
 if eval "mul 2 2" == 4; then
 	echo "Test passed..."
 else
-	echo "Test failed..."
+	echo "Test failed..." && exit 1
 fi
 
 # Test code for die function
 (die 512 "fatal error occured")
-if [ $? -eq 512 ];then
+if [ $? -ne 512 ];then
 	echo "Test passed..."
 else
-	echo "Test failed..."
+	echo "Test failed..." && exit 1
 fi
