@@ -5,10 +5,15 @@
 ###							    
 
 ## Private functions
+# Multiplication private
 _mul() {
 	_MUL=$(( $1 * $2 ))
 }
 
+# Addition private
+_add() {
+	_ADD=$(( $1 + $2 ))
+}
 # "mkdir_cd": Function for create and enter into the directory at
 # the same time, using [mkdir -p ] and [cd] commands
 # Usage: mkdir_cd /tmp/test
@@ -22,6 +27,12 @@ mkdir_cd() {
 # Usage: mul 5 5
 mul() {
 	_mul "$@" && printf "%s\n" "$_MUL"
+}
+
+# "add": Function to throw the sum of two integer numbers
+# Usage: add 4 3
+add() {
+	_add "$@" && printf "%s\n" "$_ADD"
 }
 
 # "die": Function to throw custom exit status code and messages

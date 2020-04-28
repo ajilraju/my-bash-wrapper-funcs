@@ -29,3 +29,11 @@ if [ $? -ne 512 ];then
 else
 	echo "Test failed..." && exit 1
 fi
+
+# Test code for add function
+if eval "add 2 3" == 5; then
+	echo "Test passed..."
+else
+	echo "Test failed..." && exit 1
+fi
+
