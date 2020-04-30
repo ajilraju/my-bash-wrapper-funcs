@@ -1,3 +1,0 @@
-.TH wrapper-funs 1 "28 April 2020"
-.SH FUNCTION NAMES
-mkdir_cd /- Create and moving into the directory
